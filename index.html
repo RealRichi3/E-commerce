@@ -9,6 +9,7 @@
     <meta name="author" content="" />
     <title>Home | E-Shopper</title>
     <link href="../styles/index.css" rel="stylesheet" />
+    <link href="../styles/header.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -17,32 +18,62 @@
         <!-- First Window -->
         <!--                    -->
         <div class="header">
-            <div class="brand-details">
-                <div class="logo">
-                    <img src="../images/logo.png" alt="logo" />
+            <div class="header-container">
+
+                <div class="brand-details">
+
+                    <div class="brand-name">
+                        <h1>eSHOPPER </h1>
+                    </div>
+                    <div class="brand-description">
+                        <p>
+                            Shop centre for web3 products
+                            & Best Price
+                        </p>
+                    </div>
                 </div>
-                <div class="brand-name">
-                    <h1>E-Shopper</h1>
+                <div class="nav-bar">
+                    <button class="navbarBtn"> Home</button>
+                    <button class="navbarBtn"> About</button>
+                    <button class="navbarBtn"> Contact US</button>
                 </div>
-            </div>
-            <div class="nav-bar">
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../about.html">About</a></li>
-                    <li><a href="../contact.html">Contact</a></li>
-                    <li><a href="../login.html">Login</a></li>
-                    <li><a href="../register.html">Register</a></li>
-                </ul>
-            </div>
-            <div class="header-end">
-                <div class="checkout">
-                    <p class="item-count">0</p>
-                    <img src="" class="checkout-img" />
+                <div class="menu-bar">
+                    <button class="menu-btn open-menu">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <button class="menu-btn close-menu">
+                        <i class="fa fa-bars"></i>
+                    </button>
                 </div>
-                <img src="" id="display-mode" />
+                <div class="header-end">
+                    <div class="checkout">
+                        <button class='iconBtn'>
+                            <img src="./img/icons/shopping-cart.png" class="checkout-img navbar-icon" />
+                            <div class="item-count">
+                                <p>0</p>
+                            </div>
+                        </button>
+
+                    </div>
+                    <button class="iconBtn" id="display-mode">
+                        <img src="./img/icons/brightness.png" class='navbar-icon' />
+                    </button>
+                </div>
             </div>
         </div>
-
+        <!-- <div class="drop-down-menu">
+            <div class="drop-down-menu-container">
+                <div class="drop-down-menu-item">
+                    <a href="../index.html">Home</a>
+                </div>
+                <div class="drop-down-menu-item">
+                    <a href="../about.html">About</a>
+                </div>
+                <div class="drop-down-menu-item">
+                    <a href="../contact.html">Contact Us</a>
+                </div>
+            </div>
+        </div> -->
         <div class="welcome-pane">
             <img src="" class="left-arrow" />
             <img src="" class="right-arrow" />
