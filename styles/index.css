@@ -1,3 +1,6 @@
+@import url(./header.css);
+@import url(./welcome-pane.css);
+
 html {
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
@@ -21,7 +24,6 @@ body {
   margin: 0 auto;
 }
 
-
 /* @media (max-width: 1200px) {
   .container {
     width: 1200px;
@@ -33,5 +35,3 @@ body {
     width: 780px;
   }
 } */
-
-

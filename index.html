@@ -8,11 +8,16 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Home | E-Shopper</title>
+    <!-- <link href="../styles/*.css" rel="stylesheet" /> -->
     <link href="../styles/index.css" rel="stylesheet" />
-    <link href="../styles/header.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+    <!-- <link href="../styles/header.css" rel="stylesheet" /> -->
 </head>
 
 <body>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
     <div class="container">
         <!--                    -->
         <!-- First Window -->
@@ -33,9 +38,9 @@
                     </div>
                 </div>
                 <div class="nav-bar">
-                    <button class="navbarBtn"> Home</button>
-                    <button class="navbarBtn"> About</button>
-                    <button class="navbarBtn"> Contact US</button>
+                    <a href="./index.html"><button class="navbarBtn" id="home-btn"> Home</button></a>
+                    <button class="navbarBtn" id="about-btn"> About</button>
+                    <button class="navbarBtn" id="contact-btn"> Contact US</button>
                 </div>
                 <div class="menu-bar">
                     <button class="menu-btn open-menu">
@@ -79,17 +84,19 @@
             </div>
         </div>
         <div class="welcome-pane">
-            <img src="" class="left-arrow" />
-            <img src="" class="right-arrow" />
+            <div class="arrow left-arrow fade-in"><img src="./img/icons/mainleft.png" class=" lr" /></div>
+            <div class="arrow right-arrow fade-in"><img src="./img/icons/mainright.png" class=" lr" /></div>
             <div class="main-product">
-                <img src="../images/product.jpg" />
+                <!-- <img src="../images/product.jpg" /> -->
                 <div class="product-info">
                     <h1 class="product-name">Product Name</h1>
-                    <p class="product-description">Product Description</p>
-                    <p>$99.99</p>
-                    <button class="shop-now">SHOP NOW</button>
+                    <p class="product-description">Loremsdfasdf ipsum dolor sit amet consectetur adipisicing elit.
+                        Accusantium,
+                        reiciendis!</p>
+                    <button class="shopnow">SHOP NOW</button>
                 </div>
             </div>
+
         </div>
 
         <!--                     -->

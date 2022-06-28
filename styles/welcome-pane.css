@@ -1,0 +1,126 @@
+.welcome-pane {
+  height: 700px;
+  width: 100%;
+  background: url(../img/first_window_bg1.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  color: white;
+  /* background-color: black; */
+}
+
+.main-product {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+}
+.product-description {
+  width: 300px;
+  font-size: 20px;
+}
+.product-name {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.shop-now {
+  width: 150px;
+  height: 40px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  border: 1px solid #f5f5f5;
+  color: #333;
+  font-weight: bold;
+}
+
+.shop-now:hover {
+  background-color: #333;
+  color: white;
+  border: 0;
+}
+
+.arrow {
+  width: 60px;
+  height: 60px;
+  background-color: #f5f5f58f;
+  border-radius: 5px;
+  border: 1px solid #f5f5f5;
+  color: #333;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+.arrow:hover {
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  border: 0;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.lr {
+  width: 30px;
+  height: 30px;
+}
+.left-arrow {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+}
+.right-arrow {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+.fade-in {
+  opacity: 0;
+  -webkit-animation: fadeIn 0.5s ease-in forwards;
+  animation: fadeIn 0.5s ease-in forwards;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.button-hover {
+  display: flex;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: position 10s;
+  -ms-transition: position 10s;
+  -o-transition: position 10s;
+  transition: all 0.25s ease;
+  visibility: visible;
+  border-radius: 35px;
+  border: 0;
+}
+
+@media (max-width: 780px) {
+  .welcome-pane {
+    height: 600px;
+  }
+  .main-product {
+    left: 10%;
+  }
+  .product-description {
+    width: 400px;
+  }
+  .product-name {
+    font-size: 30px;
+  }
+  .arrow {
+    visibility: visible;
+  }
+  .left-arrow {
+    left: 10px;
+  }
+  .right-arrow {
+    right: 10px;
+  }
+}
