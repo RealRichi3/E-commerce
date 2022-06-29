@@ -65,18 +65,13 @@ welcomePane.addEventListener("mouseover", function () {
   });
 });
 
+// Shop Now button
+let shopNowButton = document.getElementsByClassName("shop-now")[0];
+let featuredProductSection =
+  document.getElementsByClassName("featured-products")[0];
+
+shopNowButton.addEventListener("click", () => {
+  featuredProductSection.scrollIntoView({ behavior: "smooth" });
+});
 let i = 0;
-let views = document.getElementsByClassName("main-product");
-
-function changeView() {
-  document.slide.src = views[i];
-  if (i < views.length - 1) {
-    i++;
-  } else {
-    i = 0;
-  }
-
-  setTimeout(changeView, 3000);
-}
-
-
+let slides = Array.from(document.getElementsByClassName("main"));

@@ -53,7 +53,15 @@ h1 {
 .brand-name {
   font-size: 20px;
   font-weight: bold;
+}
+.brand-name a {
+  text-decoration: none;
   color: #e54023;
+}
+.brand-name:hover {
+  background-color: rgb(218, 216, 216);
+  border-radius: 5px;
+  padding: 0px 5px;
 }
 .brand-description {
   font-size: small;
