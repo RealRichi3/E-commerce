@@ -22,9 +22,9 @@ buttonPageSection.forEach((itemAction) => {
 });
 
 // MENUBAR open and close action
-let openMenuButton = document.getElementsByClassName("open-menu")[0];
-let closeMenuButton = document.getElementsByClassName("close-menu")[0];
-let dropDownMenu = document.getElementsByClassName("drop-down-menu")[0];
+let openMenuButton = document.getElementsByClassName("open-menu")[0],
+  closeMenuButton = document.getElementsByClassName("close-menu")[0],
+  dropDownMenu = document.getElementsByClassName("drop-down-menu")[0];
 
 openMenuButton.addEventListener("click", function () {
   dropDownMenu.style.display = "block";
@@ -52,26 +52,86 @@ window.addEventListener("scroll", function () {
   }
 });
 
+// Smooth show and hide effect for Slide show next and prev buttons
 let leftArrow = document.getElementsByClassName("left-arrow")[0];
 let rightArrow = document.getElementsByClassName("right-arrow")[0];
-let welcomePane = document.getElementsByClassName("welcome-pane")[0];
-welcomePane.addEventListener("mouseover", function () {
+let welcomePaneContainer = document.getElementsByClassName(
+  "welcome-pane-container"
+)[0];
+welcomePaneContainer.addEventListener("mouseover", function () {
   leftArrow.classList.add("button-hover");
   rightArrow.classList.add("button-hover");
 
-  welcomePane.addEventListener("mouseout", function () {
+  welcomePaneContainer.addEventListener("mouseout", function () {
     leftArrow.classList.remove("button-hover");
     rightArrow.classList.remove("button-hover");
   });
 });
 
+// Hover Effect for cart button
+let cartButton = document.getElementsByClassName("cartBtn")[0],
+  cartImg = document.getElementsByClassName("cartImg")[0];
+cartButton.addEventListener("mouseover", function () {
+  cartImg.setAttribute("src", "./img/icons/shopping-cart-hover.png");
+});
+cartButton.addEventListener("mouseout", function () {
+  cartImg.setAttribute("src", "./img/icons/shopping-cart (3).png");
+});
+
 // Shop Now button
-let shopNowButton = document.getElementsByClassName("shop-now")[0];
+let shopNowButton = Array.from(document.getElementsByClassName("shop-now"));
 let featuredProductSection =
   document.getElementsByClassName("featured-products")[0];
-
-shopNowButton.addEventListener("click", () => {
-  featuredProductSection.scrollIntoView({ behavior: "smooth" });
+shopNowButton.forEach((lrbutton) => {
+  lrbutton.addEventListener("click", () => {
+    featuredProductSection.scrollIntoView({ behavior: "smooth" });
+  });
 });
-let i = 0;
-let slides = Array.from(document.getElementsByClassName("main"));
+
+// SLIDE SHOW
+let currentSlide = -1,
+  slides = Array.from(document.getElementsByClassName("welcome-pane")),
+  nextButton = document.getElementsByClassName("next")[0],
+  prevButton = document.getElementsByClassName("prev")[0];
+// Auto slide show
+setInterval(function () {
+  if (currentSlide < slides.length - 1) {
+    currentSlide++;
+  } else {
+    currentSlide = 0;
+  }
+  slideShow(currentSlide);
+}, 5000);
+
+// Slide show on click
+function slideShow(current) {
+  slides.forEach((slide) => {
+    slide.style.visibility = "hidden";
+  });
+  // slides[currentSlide].classList.add("OpacityOnAnim");
+  slides[currentSlide].style.visibility = "hidden";
+  slides[current].style.visibility = "visible";
+}
+nextButton.addEventListener("click", function () {
+  currentSlide++;
+  if (currentSlide == slides.length) {
+    currentSlide = 0;
+  }
+  slideShow(currentSlide);
+});
+prevButton.addEventListener("click", function () {
+  currentSlide--;
+  if (currentSlide <= -1) {
+    currentSlide = slides.length - 1;
+  }
+  slideShow(currentSlide);
+});
+// Slide show fix
+// Fix first background image not showing on load
+function windowLoad() {
+  slides.forEach((slide) => {
+    slide.style.visibility = "hidden";
+  });
+  slides[0].style.visibility = "visible";
+}
+windowLoad();

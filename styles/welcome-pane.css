@@ -1,23 +1,68 @@
-
-
-.welcome-pane {
+.welcome-pane-container {
   height: 700px;
   width: 100%;
-  background: url(../img/first_window_bg1.jpg) no-repeat;
+  background: url(../img/banner.jpg) no-repeat;
   background-size: cover;
   background-position: center;
+}
+.welcome-pane {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(147, 115, 227, 0.9),
+    rgba(95, 123, 239, 0.9)
+  );
   display: flex;
   color: white;
-  /* background-color: black; */
+  overflow: hidden;
+  -moz-animation-delay: 3.5s;
+  -webkit-animation-delay: 3.5s;
+  -o-animation-delay: 3.5s;
+  animation-delay: 3.5s;
 }
 
 .main-product {
   position: absolute;
-  bottom: 10%;
+  bottom: 15%;
   left: 10%;
+  animation: opacityOn 5s normal forwards;
+  animation-delay: 2s;
+}
+
+/* .opacityOnAnim {
+  opacity: 0;
+  animation: opacityOn 5s normal forwards;
+  animation-delay: 2s;
+}
+
+@keyframes opacityOn {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  } 
+} */
+.main-product {
+  overflow: hidden;
 }
 .product-description {
-  width: 300px;
+  width: 400px;
+  height: 90px;
+  overflow: hidden;
   font-size: 20px;
 }
 .product-name {
@@ -34,14 +79,14 @@
   color: #333;
   font-weight: bold;
 }
-
 .shop-now:hover {
-  background-color: #333;
+  background-color: #3b3c38c7;
   color: white;
   border: 0;
 }
 
 .arrow {
+  position: absolute;
   width: 60px;
   height: 60px;
   background-color: #f5f5f58f;
@@ -53,6 +98,7 @@
   align-items: center;
   justify-content: center;
   display: none;
+  z-index: 12;
 }
 .arrow:hover {
   background-color: #f5f5f5;
@@ -104,7 +150,7 @@
 }
 
 @media (max-width: 780px) {
-  .welcome-pane {
+  .welcome-pane-container {
     height: 600px;
   }
   .main-product {
@@ -125,4 +171,14 @@
   .right-arrow {
     right: 10px;
   }
+}
+
+.lrbtn {
+  height: 100%;
+  width: 100%;
+  border: 0;
+  background: transparent;
+}
+.top-products {
+  position: relative;
 }
