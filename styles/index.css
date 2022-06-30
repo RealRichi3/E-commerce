@@ -1,5 +1,6 @@
 @import url(./header.css);
 @import url(./welcome-pane.css);
+@import url(./new-arrivals.css);
 
 html {
   font-size: 16px;
