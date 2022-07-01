@@ -93,6 +93,7 @@ let currentSlide = -1,
   slides = Array.from(document.getElementsByClassName("welcome-pane")),
   nextButton = document.getElementsByClassName("next")[0],
   prevButton = document.getElementsByClassName("prev")[0];
+
 // Auto slide show
 setInterval(function () {
   if (currentSlide < slides.length - 1) {
@@ -135,3 +136,17 @@ function windowLoad() {
   slides[0].style.visibility = "visible";
 }
 windowLoad();
+
+// NEW ARRIVALS
+// Product Image Hover Effect
+let newArrivalItemImgs = Array.from(
+  document.getElementsByClassName("new-arrivals-item-img")
+);
+newArrivalItemImgs.forEach((item) => {
+  item.addEventListener("mouseover", function () {
+    item.children[1].style.visibility = "visible";
+  });
+  item.addEventListener("mouseout", function () {
+    item.children[1].style.visibility = "hidden";
+  });
+});
