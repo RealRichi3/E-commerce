@@ -191,12 +191,12 @@ let shopProducts = Array.from(document.getElementsByClassName("shop-item")),
 function shopSlideShow(currentShopSlide) {
   groupedShopProducts.forEach((group) => {
     group.forEach((product) => {
-      product.style.visibility = "hidden";
+      product.style.display = "none";
     });
   });
   // groupedShopProducts[shopCurrentSlide].style.visibility = "hidden";
   groupedShopProducts[currentShopSlide].forEach((item) => {
-    item.style.visibility = "visible";
+    item.style.display = "block";
   });
 }
 // Group shop products in twos
