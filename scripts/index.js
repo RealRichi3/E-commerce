@@ -162,3 +162,21 @@ shopItemImgs.forEach((item) => {
     item.children[1].style.visibility = "hidden";
   });
 });
+// Add product description to match hover img
+let hoverImgText = Array.from(
+  document.getElementsByClassName("shop-img-hover")
+);
+hoverImgText.forEach((item) => {
+  item.children[0].innerHTML =
+    item.parentNode.parentNode.getElementsByClassName(
+      "shop-item-description"
+    )[0].innerHTML;
+});
+
+// Set Stock bar length to match soldQuantity/totalQuantity
+let stockBar = Array.from(document.getElementsByClassName("stock-bar"));
+stockBar.forEach((bar) => {
+  let stock = bar.parentElement.children[0].innerHTML.split("/"),
+    stockPercentage = (Number(stock[0]) / Number(stock[1])) * 100;
+  bar.style.width = `${stockPercentage}%`;
+});
