@@ -26,8 +26,8 @@ h1 {
 }
 .scrolled {
   position: fixed;
-  /* background-color: #9280e5; */
-  background-color: #483b77c4;
+  background-color: #6e5eb7;
+  /* background-color: #5d1297; */
   -webkit-transition: all 0.5s ease;
   -moz-transition: position 10s;
   -ms-transition: position 10s;

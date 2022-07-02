@@ -320,13 +320,13 @@
         <!--                     -->
         <div class="main-shop">
             <div class="shop-header">
-                <h1>New Shop</h1>
+                <h1>Shop</h1>
                 <div class="shopNextPrevButtons">
                     <button class="shop-prev-button">
-                        <img src="./img/icons/left-arrow.png" />
+                        <img src="./img/icons/mainleft.png" />
                     </button>
                     <button class="shop-next-button">
-                        <img src="./img/icons/right-arrow.png" />
+                        <img src="./img/icons/mainright.png" />
                     </button>
                 </div>
             </div>
@@ -343,9 +343,8 @@
                     </div>
                     <div class="shop-item-info">
                         <div class="shop-item-up-pane">
-                            <p class="product-name">Product Name</p>
-                            <p class="price">$100.00</p>
-                            <button class="add-to-cart">Add to Cart</button>
+                            <h3 class="shop-item-name">Product Name</h3>
+                            <p class="price">$999.00</p>
                         </div>
                         <div class="shop-item-down-pane">
                             <p>
@@ -353,8 +352,12 @@
                                 Perspiciatis expedita quam delectus, inventore voluptatum nisi nihil officia quisquam
                                 dolorem
                             </p>
-                            <div class="stock"></div>
-                            <button class="add-to-cart">Add to Cart</button>
+                            <div class="stock-container">
+                                <p> 10/15 </p>
+                                <div class="stock-bar">
+                                </div>
+                            </div>
+                            <!-- <button class="add-to-cart">Add to Cart</button> -->
                         </div>
                     </div>
                 </div>
@@ -371,9 +374,8 @@
                     </div>
                     <div class="shop-item-info">
                         <div class="shop-item-up-pane">
-                            <p class="product-name">Product Name</p>
-                            <p class="price">$100.00</p>
-                            <button class="add-to-cart">Add to Cart</button>
+                            <h3 class="shop-item-name">Product Name</h3>
+                            <p class="price">$999.00</p>
                         </div>
                         <div class="shop-item-down-pane">
                             <p>
@@ -381,279 +383,344 @@
                                 Perspiciatis expedita quam delectus, inventore voluptatum nisi nihil officia quisquam
                                 dolorem
                             </p>
-                            <div class="stock"></div>
-                            <button class="add-to-cart">Add to Cart</button>
+                            <div class="stock-container">
+                                <p> 10/15 </p>
+                                <div class="stock-bar">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="shop-item">
+                    <div class="shop-item-img">
+                        <img src="./img/product_img/pc.png" />
+                        <div class="shop-img-hover ">
+                            <p> asdfasdf</p>
+                            <button class="preview-button">
+                                <img class='verbose-preview-icon' src="./img/icons/eye-open.png" />
+                            </button>
+                        </div>
+                    </div>
+                    <div class="shop-item-info">
+                        <div class="shop-item-up-pane">
+                            <h3 class="shop-item-name">Product Name</h3>
+                            <p class="price">$999.00</p>
+                        </div>
+                        <div class="shop-item-down-pane">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor fuga sit tempora.
+                                Perspiciatis expedita quam delectus, inventore voluptatum nisi nihil officia quisquam
+                                dolorem
+                            </p>
+                            <div class="stock-container">
+                                <p> 10/15 </p>
+                                <div class="stock-bar">
+                                </div>
+                            </div>
+                            <!-- <button class="add-to-cart">Add to Cart</button> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="shop-item">
+                    <div class="shop-item-img">
+                        <img src="./img/product_img/pc.png" />
+                        <div class="shop-img-hover ">
+                            <p> </p>
+                            <button class="preview-button">
+                                <img class='verbose-preview-icon' src="./img/icons/eye-open.png" />
+                            </button>
+                        </div>
+                    </div>
+                    <div class="shop-item-info">
+                        <div class="shop-item-up-pane">
+                            <h3 class="shop-item-name">Product Name</h3>
+                            <p class="price">$999.00</p>
+                        </div>
+                        <div class="shop-item-down-pane">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor fuga sit tempora.
+                                Perspiciatis expedita quam delectus, inventore voluptatum nisi nihil officia quisquam
+                                dolorem
+                            </p>
+                            <div class="stock-container">
+                                <p> 10/15 </p>
+                                <div class="stock-bar">
+                                </div>
+                            </div>
+                            <!-- <button class="add-to-cart">Add to Cart</button> -->
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-            <!--                     -->
-            <!-- Top Products -->
-            <!--                     -->
-            <div class="top-products">
-                <img src="" class="left-arrow" />
-                <img src="" class="right-arrow" />
-                <div class="product-list">
-                    <div class="product-item">
-                        <img src="../images/product.jpg" />
-                        <div class="product-info">
-                            <div class="product-top">
-                                <h1 class="product-name">Product Name</h1>
-                                <p>$99.99</p>
-                                <button class="shop-now">SHOP NOW</button>
-                            </div>
-                            <div class="product-bottom">
-                                <p class="product-description">Product Description</p>
-                                <p>Stock</p>
-                            </div>
-                            <div class="product-overlay">
-                                <button class="add-to-cart">Add to cart</button>
-                            </div>
+        <!--                     -->
+        <!-- Top Products -->
+        <!--                     -->
+        <div class="top-products">
+            <img src="" class="left-arrow" />
+            <img src="" class="right-arrow" />
+            <div class="product-list">
+                <div class="product-item">
+                    <img src="../images/product.jpg" />
+                    <div class="product-info">
+                        <div class="product-top">
+                            <h1 class="product-name">Product Name</h1>
+                            <p>$99.99</p>
+                            <button class="shop-now">SHOP NOW</button>
                         </div>
-                    </div>
-                    <div class="product-item">
-                        <img src="../images/product.jpg" />
-                        <div class="product-info">
-                            <div class="product-top">
-                                <h1 class="product-name">Product Name</h1>
-                                <p>$99.99</p>
-                                <button class="shop-now">SHOP NOW</button>
-                            </div>
-                            <div class="product-bottom">
-                                <p class="product-description">Product Description</p>
-                                <p>Stock</p>
-                            </div>
-                            <div class="product-overlay">
-                                <button class="add-to-cart">Add to cart</button>
-                            </div>
+                        <div class="product-bottom">
+                            <p class="product-description">Product Description</p>
+                            <p>Stock</p>
                         </div>
-                    </div>
-                    <div class="product-item">
-                        <img src="../images/product.jpg" />
-                        <div class="product-info">
-                            <div class="product-top">
-                                <h1 class="product-name">Product Name</h1>
-                                <p>$99.99</p>
-                                <button class="shop-now">SHOP NOW</button>
-                            </div>
-                            <div class="product-bottom">
-                                <p class="product-description">Product Description</p>
-                                <p>Stock</p>
-                            </div>
-                            <div class="product-overlay">
-                                <button class="add-to-cart">Add to cart</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item">
-                        <img src="../images/product.jpg" />
-                        <div class="product-info">
-                            <div class="product-top">
-                                <h1 class="product-name">Product Name</h1>
-                                <p>$99.99</p>
-                                <button class="shop-now">SHOP NOW</button>
-                            </div>
-                            <div class="product-bottom">
-                                <p class="product-description">Product Description</p>
-                                <p>Stock</p>
-                            </div>
-                            <div class="product-overlay">
-                                <button class="add-to-cart">Add to cart</button>
-                            </div>
+                        <div class="product-overlay">
+                            <button class="add-to-cart">Add to cart</button>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!--                     -->
-            <!-- Featured Products -->
-            <!--                     -->
-            <div class="featured-products">
-                <h1>Featured roducts</h1>
-                <div class="products-pane">
-                    <div class="product">
-                        <img src="../images/product.jpg" />
-                        <div class="product-info">
+                <div class="product-item">
+                    <img src="../images/product.jpg" />
+                    <div class="product-info">
+                        <div class="product-top">
                             <h1 class="product-name">Product Name</h1>
-                            <p class="price">$99.99</p>
-                            <p class="stock"></p>
-                            <p>
-                                Description <button><img src="up-arrow" /></button>
-                            </p>
+                            <p>$99.99</p>
+                            <button class="shop-now">SHOP NOW</button>
                         </div>
-                        <div class="description-overlay">
+                        <div class="product-bottom">
                             <p class="product-description">Product Description</p>
+                            <p>Stock</p>
+                        </div>
+                        <div class="product-overlay">
                             <button class="add-to-cart">Add to cart</button>
                         </div>
                     </div>
-
-                    <div class="product">
-                        <img src="../images/product.jpg" />
-                        <div class="product-info">
+                </div>
+                <div class="product-item">
+                    <img src="../images/product.jpg" />
+                    <div class="product-info">
+                        <div class="product-top">
                             <h1 class="product-name">Product Name</h1>
-                            <p class="price">$99.99</p>
-                            <p class="stock"></p>
-                            <p>
-                                Description <button><img src="up-arrow" /></button>
-                            </p>
+                            <p>$99.99</p>
+                            <button class="shop-now">SHOP NOW</button>
                         </div>
-                        <div class="description-overlay">
+                        <div class="product-bottom">
                             <p class="product-description">Product Description</p>
+                            <p>Stock</p>
+                        </div>
+                        <div class="product-overlay">
                             <button class="add-to-cart">Add to cart</button>
                         </div>
                     </div>
-
-                    <div class="product">
-                        <img src="../images/product.jpg" />
-                        <div class="product-info">
+                </div>
+                <div class="product-item">
+                    <img src="../images/product.jpg" />
+                    <div class="product-info">
+                        <div class="product-top">
                             <h1 class="product-name">Product Name</h1>
-                            <p class="price">$99.99</p>
-                            <p class="stock"></p>
-                            <p>
-                                Description <button><img src="up-arrow" /></button>
-                            </p>
+                            <p>$99.99</p>
+                            <button class="shop-now">SHOP NOW</button>
                         </div>
-                        <div class="description-overlay">
+                        <div class="product-bottom">
                             <p class="product-description">Product Description</p>
-                            <button class="add-to-cart">Add to cart</button>
+                            <p>Stock</p>
                         </div>
-                    </div>
-
-                    <div class="product">
-                        <img src="../images/product.jpg" />
-                        <div class="product-info">
-                            <h1 class="product-name">Product Name</h1>
-                            <p class="price">$99.99</p>
-                            <p class="stock"></p>
-                            <p>
-                                Description <button><img src="up-arrow" /></button>
-                            </p>
-                        </div>
-                        <div class="description-overlay">
-                            <p class="product-description">Product Description</p>
-                            <button class="add-to-cart">Add to cart</button>
-                        </div>
-                    </div>
-
-                    <div class="product">
-                        <img src="../images/product.jpg" />
-                        <div class="product-info">
-                            <h1 class="product-name">Product Name</h1>
-                            <p class="price">$99.99</p>
-                            <p class="stock"></p>
-                            <p>
-                                Description <button><img src="up-arrow" /></button>
-                            </p>
-                        </div>
-                        <div class="description-overlay">
-                            <p class="product-description">Product Description</p>
-                            <button class="add-to-cart">Add to cart</button>
-                        </div>
-                    </div>
-
-                    <div class="product">
-                        <img src="../images/product.jpg" />
-                        <div class="product-info">
-                            <h1 class="product-name">Product Name</h1>
-                            <p class="price">$99.99</p>
-                            <p class="stock"></p>
-                            <p>
-                                Description <button><img src="up-arrow" /></button>
-                            </p>
-                        </div>
-                        <div class="description-overlay">
-                            <p class="product-description">Product Description</p>
-                            <button class="add-to-cart">Add to cart</button>
-                        </div>
-                    </div>
-
-                    <div class="product">
-                        <img src="../images/product.jpg" />
-                        <div class="product-info">
-                            <h1 class="product-name">Product Name</h1>
-                            <p class="price">$99.99</p>
-                            <p class="stock"></p>
-                            <p>
-                                Description <button><img src="up-arrow" /></button>
-                            </p>
-                        </div>
-                        <div class="description-overlay">
-                            <p class="product-description">Product Description</p>
-                            <button class="add-to-cart">Add to cart</button>
-                        </div>
-                    </div>
-
-                    <div class="product">
-                        <img src="../images/product.jpg" />
-                        <div class="product-info">
-                            <h1 class="product-name">Product Name</h1>
-                            <p class="price">$99.99</p>
-                            <p class="stock"></p>
-                            <p>
-                                Description <button><img src="up-arrow" /></button>
-                            </p>
-                        </div>
-                        <div class="description-overlay">
-                            <p class="product-description">Product Description</p>
-                            <button class="add-to-cart">Add to cart</button>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <img src="../images/product.jpg" />
-                        <div class="product-info">
-                            <h1 class="product-name">Product Name</h1>
-                            <p class="price">$99.99</p>
-                            <p class="stock"></p>
-                            <p>
-                                Description <button><img src="up-arrow" /></button>
-                            </p>
-                        </div>
-                        <div class="description-overlay">
-                            <p class="product-description">Product Description</p>
+                        <div class="product-overlay">
                             <button class="add-to-cart">Add to cart</button>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!--                     -->
-            <!-- Footer -->
-            <!--                     -->
-            <div class="footer">
-                <p class="page-description">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit eum numquam qui debitis
-                    aspernatur! In,
-                    laborum qui? Optio earum est ducimus esse. Rerum necessitatibus consectetur cupiditate nulla
-                    aliquam
-                    ducimus iusto officia est itaque odit non, cum, numquam excepturi distinctio nostrum deserunt
-                    sunt
-                    tenetur magnam sed. Saepe odit aperiam vero.
-                </p>
-                <div class="contact-info">
-                    <p class="contact-details"> +456 5354 345</p>
-                    <a href="mailto:">
-                        <p class="contact-details"> eshopper@support.com</p>
-                    </a>
-                    <p class="contact-details"> 23 Old Avenue, Silver Express, Oklahoma</p>
-                </div>
-
-
-                <div class="socials">
-                    <div> <a href=""><img src="../img/icons/facebook.png" /></a></div>
-                    <div> <a href=""><img src="./img/icons/twitter.png" /></a></div>
-                    <div> <a href="mailto:"><img src="./img/icons/gmail.png" /></a></div>
-                </div>
-
-                <div class="footer-copyright">
-                    <p>Copyright &copy; 2020 All rights reserved</p>
-                </div>
-            </div>
-
         </div>
 
-        <script src="./scripts/index.js"></script>
+        <!--                     -->
+        <!-- Featured Products -->
+        <!--                     -->
+        <div class="featured-products">
+            <h1>Featured roducts</h1>
+            <div class="products-pane">
+                <div class="product">
+                    <img src="../images/product.jpg" />
+                    <div class="product-info">
+                        <h1 class="product-name">Product Name</h1>
+                        <p class="price">$99.99</p>
+                        <p class="stock"></p>
+                        <p>
+                            Description <button><img src="up-arrow" /></button>
+                        </p>
+                    </div>
+                    <div class="description-overlay">
+                        <p class="product-description">Product Description</p>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="../images/product.jpg" />
+                    <div class="product-info">
+                        <h1 class="product-name">Product Name</h1>
+                        <p class="price">$99.99</p>
+                        <p class="stock"></p>
+                        <p>
+                            Description <button><img src="up-arrow" /></button>
+                        </p>
+                    </div>
+                    <div class="description-overlay">
+                        <p class="product-description">Product Description</p>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="../images/product.jpg" />
+                    <div class="product-info">
+                        <h1 class="product-name">Product Name</h1>
+                        <p class="price">$99.99</p>
+                        <p class="stock"></p>
+                        <p>
+                            Description <button><img src="up-arrow" /></button>
+                        </p>
+                    </div>
+                    <div class="description-overlay">
+                        <p class="product-description">Product Description</p>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="../images/product.jpg" />
+                    <div class="product-info">
+                        <h1 class="product-name">Product Name</h1>
+                        <p class="price">$99.99</p>
+                        <p class="stock"></p>
+                        <p>
+                            Description <button><img src="up-arrow" /></button>
+                        </p>
+                    </div>
+                    <div class="description-overlay">
+                        <p class="product-description">Product Description</p>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="../images/product.jpg" />
+                    <div class="product-info">
+                        <h1 class="product-name">Product Name</h1>
+                        <p class="price">$99.99</p>
+                        <p class="stock"></p>
+                        <p>
+                            Description <button><img src="up-arrow" /></button>
+                        </p>
+                    </div>
+                    <div class="description-overlay">
+                        <p class="product-description">Product Description</p>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="../images/product.jpg" />
+                    <div class="product-info">
+                        <h1 class="product-name">Product Name</h1>
+                        <p class="price">$99.99</p>
+                        <p class="stock"></p>
+                        <p>
+                            Description <button><img src="up-arrow" /></button>
+                        </p>
+                    </div>
+                    <div class="description-overlay">
+                        <p class="product-description">Product Description</p>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="../images/product.jpg" />
+                    <div class="product-info">
+                        <h1 class="product-name">Product Name</h1>
+                        <p class="price">$99.99</p>
+                        <p class="stock"></p>
+                        <p>
+                            Description <button><img src="up-arrow" /></button>
+                        </p>
+                    </div>
+                    <div class="description-overlay">
+                        <p class="product-description">Product Description</p>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="../images/product.jpg" />
+                    <div class="product-info">
+                        <h1 class="product-name">Product Name</h1>
+                        <p class="price">$99.99</p>
+                        <p class="stock"></p>
+                        <p>
+                            Description <button><img src="up-arrow" /></button>
+                        </p>
+                    </div>
+                    <div class="description-overlay">
+                        <p class="product-description">Product Description</p>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="../images/product.jpg" />
+                    <div class="product-info">
+                        <h1 class="product-name">Product Name</h1>
+                        <p class="price">$99.99</p>
+                        <p class="stock"></p>
+                        <p>
+                            Description <button><img src="up-arrow" /></button>
+                        </p>
+                    </div>
+                    <div class="description-overlay">
+                        <p class="product-description">Product Description</p>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--                     -->
+        <!-- Footer -->
+        <!--                     -->
+        <div class="footer">
+            <p class="page-description">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit eum numquam qui debitis
+                aspernatur! In,
+                laborum qui? Optio earum est ducimus esse. Rerum necessitatibus consectetur cupiditate nulla
+                aliquam
+                ducimus iusto officia est itaque odit non, cum, numquam excepturi distinctio nostrum deserunt
+                sunt
+                tenetur magnam sed. Saepe odit aperiam vero.
+            </p>
+            <div class="contact-info">
+                <p class="contact-details"> +456 5354 345</p>
+                <a href="mailto:">
+                    <p class="contact-details"> eshopper@support.com</p>
+                </a>
+                <p class="contact-details"> 23 Old Avenue, Silver Express, Oklahoma</p>
+            </div>
+
+
+            <div class="socials">
+                <div> <a href=""><img src="../img/icons/facebook.png" /></a></div>
+                <div> <a href=""><img src="./img/icons/twitter.png" /></a></div>
+                <div> <a href="mailto:"><img src="./img/icons/gmail.png" /></a></div>
+            </div>
+
+            <div class="footer-copyright">
+                <p>Copyright &copy; 2020 All rights reserved</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./scripts/index.js"></script>
 </body>
 
 </html>

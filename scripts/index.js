@@ -150,3 +150,15 @@ newArrivalItemImgs.forEach((item) => {
     item.children[1].style.visibility = "hidden";
   });
 });
+
+// SHOP ITEMS
+// Product Image Hover Effect
+let shopItemImgs = Array.from(document.getElementsByClassName("shop-item-img"));
+shopItemImgs.forEach((item) => {
+  item.addEventListener("mouseover", function () {
+    item.children[1].style.visibility = "visible";
+  });
+  item.addEventListener("mouseout", function () {
+    item.children[1].style.visibility = "hidden";
+  });
+});
