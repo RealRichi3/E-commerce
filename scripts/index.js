@@ -80,11 +80,10 @@ cartButton.addEventListener("mouseout", function () {
 
 // Shop Now button
 let shopNowButton = Array.from(document.getElementsByClassName("shop-now"));
-let featuredProductSection =
-  document.getElementsByClassName("featured-products")[0];
+let shop = document.getElementsByClassName("main-shop")[0];
 shopNowButton.forEach((lrbutton) => {
   lrbutton.addEventListener("click", () => {
-    featuredProductSection.scrollIntoView({ behavior: "smooth" });
+    shop.scrollIntoView({ behavior: "smooth" });
   });
 });
 
@@ -93,6 +92,15 @@ let currentSlide = -1,
   slides = Array.from(document.getElementsByClassName("welcome-pane")),
   nextButton = document.getElementsByClassName("next")[0],
   prevButton = document.getElementsByClassName("prev")[0];
+
+// Slide show on click
+function slideShow(current) {
+  slides.forEach((slide) => {
+    slide.style.visibility = "hidden";
+  });
+  // slides[currentSlide].style.visibility = "hidden";
+  slides[current].style.visibility = "visible";
+}
 
 // Auto slide show
 setInterval(function () {
@@ -104,15 +112,6 @@ setInterval(function () {
   slideShow(currentSlide);
 }, 5000);
 
-// Slide show on click
-function slideShow(current) {
-  slides.forEach((slide) => {
-    slide.style.visibility = "hidden";
-  });
-  // slides[currentSlide].classList.add("OpacityOnAnim");
-  slides[currentSlide].style.visibility = "hidden";
-  slides[current].style.visibility = "visible";
-}
 nextButton.addEventListener("click", function () {
   currentSlide++;
   if (currentSlide == slides.length) {
@@ -162,6 +161,7 @@ shopItemImgs.forEach((item) => {
     item.children[1].style.visibility = "hidden";
   });
 });
+
 // Add product description to match hover img
 let hoverImgText = Array.from(
   document.getElementsByClassName("shop-img-hover")
@@ -179,4 +179,42 @@ stockBar.forEach((bar) => {
   let stock = bar.parentElement.children[0].innerHTML.split("/"),
     stockPercentage = (Number(stock[0]) / Number(stock[1])) * 100;
   bar.style.width = `${stockPercentage}%`;
+});
+
+// Shop slide show
+let shopProducts = Array.from(document.getElementsByClassName("shop-item")),
+  nextButtonShop = document.getElementsByClassName("shop-prev-button")[0],
+  prevButtonShop = document.getElementsByClassName("shop-next-button")[0],
+  groupedShopProducts = [],
+  shopCurrentSlide = -1;
+
+function shopSlideShow(currentSlide) {
+  groupedShopProducts.forEach((group) => {
+    group.forEach((product) => {
+      product.style.visibility = "hidden";
+    });
+  });
+  // groupedShopProducts[shopCurrentSlide].style.visibility = "hidden";
+  groupedShopProducts[currentSlide].forEach((item) => {
+    item.style.visibility = "visible";
+  });
+}
+// Group shop products in twos
+for (let i = 0; i < shopProducts.length; i += 2) {
+  groupedShopProducts.push(shopProducts.slice(i, i + 2));
+}
+nextButtonShop.addEventListener("click", function () {
+  if (currentSlide < groupedShopProducts.length - 1) {
+    currentSlide++;
+  } else {
+    currentSlide = 0;
+  }
+  shopSlideShow(currentSlide);
+});
+prevButtonShop.addEventListener("click", function () {
+  currentSlide--;
+  if (currentSlide <= -1) {
+    currentSlide = groupedShopProducts.length - 1;
+  }
+  shopSlideShow(currentSlide);
 });
