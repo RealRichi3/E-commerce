@@ -188,14 +188,14 @@ let shopProducts = Array.from(document.getElementsByClassName("shop-item")),
   groupedShopProducts = [],
   shopCurrentSlide = -1;
 
-function shopSlideShow(currentSlide) {
+function shopSlideShow(currentShopSlide) {
   groupedShopProducts.forEach((group) => {
     group.forEach((product) => {
       product.style.visibility = "hidden";
     });
   });
   // groupedShopProducts[shopCurrentSlide].style.visibility = "hidden";
-  groupedShopProducts[currentSlide].forEach((item) => {
+  groupedShopProducts[currentShopSlide].forEach((item) => {
     item.style.visibility = "visible";
   });
 }
@@ -204,17 +204,17 @@ for (let i = 0; i < shopProducts.length; i += 2) {
   groupedShopProducts.push(shopProducts.slice(i, i + 2));
 }
 nextButtonShop.addEventListener("click", function () {
-  if (currentSlide < groupedShopProducts.length - 1) {
-    currentSlide++;
+  if (shopCurrentSlide < groupedShopProducts.length - 1) {
+    shopCurrentSlide++;
   } else {
-    currentSlide = 0;
+    shopCurrentSlide = 0;
   }
-  shopSlideShow(currentSlide);
+  shopSlideShow(shopCurrentSlide);
 });
 prevButtonShop.addEventListener("click", function () {
-  currentSlide--;
-  if (currentSlide <= -1) {
-    currentSlide = groupedShopProducts.length - 1;
+  shopCurrentSlide--;
+  if (shopCurrentSlide <= -1) {
+    shopCurrentSlide = groupedShopProducts.length - 1;
   }
-  shopSlideShow(currentSlide);
+  shopSlideShow(shopCurrentSlide);
 });
