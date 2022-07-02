@@ -233,6 +233,9 @@
     margin: auto;
     gap: 10px;
   }
+  .shop-img-hover > p {
+    height: 190px;
+  }
 }
 .shop-item-img .preview-button {
   background-color: #e3e3e3;
