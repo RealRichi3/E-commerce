@@ -29,6 +29,26 @@ body {
   align-items: center;
 }
 
+.add-to-cart {
+  width: 120px;
+  height: 40px;
+  margin: 20px;
+  border: 0;
+  border-radius: 20px;
+  background-color: #3b3c386f;
+  color: white;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.add-to-cart:hover {
+  border-radius: 3px;
+  background-color: #3b3c38e0;
+  border: 1px solid #3b3c38c7;
+  color: white;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
 /* Footer Design */
 .footer {
   width: 100%;
