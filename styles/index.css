@@ -115,7 +115,7 @@ body {
 .verbose-pane-container > div {
   flex: 1 1;
   width: 100%;
-  /* height: fit-content; */
+  height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -125,6 +125,13 @@ body {
 .verbose-pane-container .product-info {
   padding: 0 20px;
   position: relative;
+}
+.verbose-pane-container .product-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;  
 }
 .verbose-pane-container .product-img > img {
   width: 100%;
@@ -154,10 +161,10 @@ body {
   color: rgb(0, 159, 0);
 }
 .verbose-pane-container .product-info .product-description {
-  /* margin-bottom: 20px; */
   height: 300px;
   justify-content: flex-start;
   width: 100%;
+  height: 200px;
   font-size: medium;
   word-wrap: break-word;
   overflow-x: hidden;
@@ -285,6 +292,29 @@ body {
 .contact-info,
 .footer-copyright {
   margin-bottom: 0px;
+}
+
+@media (max-width: 1056px) {
+  .verbose-pane-container {
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    justify-content: flex-start;
+    height: 80%;
+    width: 90%;
+  }
+  .verbose-pane-container .product-img {
+    flex: 1 1;
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    margin-top: 20px;
+  }
+  .close-verbose-pane {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+  }
 }
 
 @media (max-width: 780px) {
