@@ -73,6 +73,7 @@ body {
   background-color: #f5f5f5;
   border-radius: 10px;
   border: 1px solid #4d4d4d;
+  position: relative;
   /* margin: auto; */
 }
 .close-verbose-pane {
@@ -123,6 +124,7 @@ body {
 }
 .verbose-pane-container .product-info {
   padding: 0 20px;
+  position: relative;
 }
 .verbose-pane-container .product-img > img {
   width: 100%;
@@ -130,14 +132,13 @@ body {
 }
 .verbose-pane-container .product-info > * {
   width: 100%;
-  height: auto;
+  /* height: auto;  */
   display: flex;
   flex-direction: column;
   align-items: left;
   justify-content: center;
 }
 .verbose-pane-container .product-info > .product-name {
-  /* height: fit-content; */
   font-weight: 400;
   margin-bottom: 10px;
   border-bottom: 1px solid #dedede;
@@ -152,14 +153,15 @@ body {
 .verbose-pane-container .item-stock {
   color: rgb(0, 159, 0);
 }
-.verbose-pane-container .product-info > .product-description {
-  margin-bottom: 20px;
-  height: 500px;
+.verbose-pane-container .product-info .product-description {
+  /* margin-bottom: 20px; */
+  height: 300px;
+  justify-content: flex-start;
   width: 100%;
   font-size: medium;
-  overflow: visible;
-  /* overflow-y: scroll; */
-  /* overflow-x: hidden; */
+  word-wrap: break-word;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 .verbose-pane-container .product-info > .product-price {
   font-size: xx-large;
@@ -223,14 +225,12 @@ body {
   align-items: center;
   color: rgba(255, 255, 255, 0.617);
 }
-
 .page-description {
   font-size: 12px;
   font-weight: 100;
   width: 500px;
   margin-bottom: 0;
 }
-
 .contact-info {
   display: flex;
   flex-direction: column;
