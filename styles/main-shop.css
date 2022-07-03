@@ -282,10 +282,6 @@
     margin: 0;
     font-size: xx-small;
   }
-  /* .shopNextPrevButtons{
-    height: 50px;
-    width: 50px;
-  } */
   .shopNextPrevButtons {
     height: 70%;
     width: 100px;
@@ -293,6 +289,25 @@
   .shopNextPrevButtons > button {
     height: 40px;
     width: 40px;
+  }
+  .stock-container {
+    height: 20px;
+    width: 150px;
+  }
+  .shop-item {
+    padding: 15px 10px;
+    height:300px;
+  }
+  .shop-item-img {
+    padding: 5px;
+    width: 100%;
+    height: 100%;
+  }
+  .shop-item-img .product-img{
+    width: 100%;
+    height: 60%;
+    border-radius: 15px;
+    padding: 5px;
   }
 }
 @media (max-width: 780px) {
