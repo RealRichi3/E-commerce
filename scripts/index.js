@@ -78,6 +78,37 @@ cartButton.addEventListener("mouseout", function () {
   cartImg.setAttribute("src", "./img/icons/shopping-cart (3).png");
 });
 
+// Add items from shop to welcome pane
+function addToWelcomePane(product) {
+  welcomePaneContainer.appendChild(product);
+}
+let productsToShow = Array.from(
+  document.getElementsByClassName("shop-item")
+).slice(0, 5);
+productsToShow.forEach((product) => {
+  let itemName = product.getElementsByClassName("product-name")[0].innerHTML,
+    itemDescription = product.getElementsByClassName("product-description")[0]
+      .innerHTML,
+    newHTMLObject = Object.assign(document.createElement("div"), {
+      className: "welcome-pane",
+      innerHTML: `
+      <div class="main-product">
+          <div class="product-info">
+              <h1 class="product-name"> </h1>
+              <p class="product-description">
+              </p>
+              <button class="shop-now">SHOP NOW</button>
+          </div>
+      </div>
+`,});
+
+  newHTMLObject.getElementsByClassName("product-name")[0].innerHTML = itemName;
+  newHTMLObject.getElementsByClassName("product-description")[0].innerHTML =
+    itemDescription;
+  newHTMLObject.style.display = "flex";
+  addToWelcomePane(newHTMLObject);
+});
+
 // Shop Now button
 let shopNowButton = Array.from(document.getElementsByClassName("shop-now"));
 let shop = document.getElementsByClassName("main-shop")[0];
@@ -279,14 +310,15 @@ addToCartButtons.forEach((button) => {
 });
 
 // Remove item from cart on button click (remove-item button)
-let removeItemButtons = Array.from(document.getElementsByClassName("remove-item"));
+let removeItemButtons = Array.from(
+  document.getElementsByClassName("remove-item")
+);
 removeItemButtons.forEach((button) => {
   button.addEventListener("click", () => {
     button.parentNode.parentNode.remove();
     cartItemNumber.innerHTML = Number(cartItemNumber.innerHTML) - 1;
   });
-}
-);
+});
 
 // Slide show fix
 // Fix all slides displaying on window load
