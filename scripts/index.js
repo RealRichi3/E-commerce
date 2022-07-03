@@ -41,7 +41,7 @@ closeMenuButton.addEventListener("click", function () {
 let header = document.getElementsByClassName("header")[0];
 let headerContainer = document.getElementsByClassName("header-container")[0];
 window.addEventListener("scroll", function () {
-  if (window.scrollY > 600) {
+  if (window.scrollY > 0) {
     header.classList.add("scrolled");
     header.classList.add("shadow");
     headerContainer.classList.add("scrolled");

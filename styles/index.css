@@ -123,6 +123,15 @@ body {
 .footer-copyright {
   margin-bottom: 0px;
 }
+
+@media (max-width: 780px) {
+  .footer {
+    height: auto;
+  }
+  .footer > * {
+    width: 100%;
+  }
+}
 /* @media (max-width: 1200px) {
   .container {
     width: 1200px;

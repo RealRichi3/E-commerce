@@ -4,6 +4,7 @@
   margin-bottom: 100px;
   width: 100%;
   max-width: 1400px;
+  /* max-width: 100%; */
   height: auto;
   display: flex;
   flex-direction: column;
@@ -66,7 +67,7 @@
 .shop-container {
   width: 1400px;
   max-width: 1400px;
-  /* margin: 0 auto; */
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
@@ -270,13 +271,21 @@
     margin: auto;
     padding: 0 20px;
   }
-  .shop-container {
-    grid-template-columns: 1fr;
-    width: 100%;
-    margin: auto;
-    gap: 10px;
-  }
+
   .shop-img-hover > p {
     height: 190px;
+  }
+}
+@media (max-width: 1056px) {
+  .shop-container {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1056px) {
+  .shop-container {
+    grid-template-columns: 1fr 1fr;
+    max-width: 100%;
   }
 }

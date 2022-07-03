@@ -25,6 +25,7 @@ h1 {
   color: white;
 }
 .scrolled {
+  /* width: 100%; */
   position: fixed;
   background-color: #6e5eb7;
   /* background-color: #5d1297; */
@@ -120,10 +121,6 @@ h1 {
   width: 100%;
   height: 100%;
 }
-.menu-bar:active {
-  /* background-color: rgba(0, 0, 128, 0.557); */
-}
-
 .menu-bar {
   height: 60px;
   border-radius: 5px;
@@ -211,19 +208,25 @@ h1 {
 }
 .iconBtn:hover {
   color: white;
-  border: 0px;
+  border: 0;
 }
 .iconBtn:hover .item-count,
 .iconBtn:hover p {
   color: white;
 }
 
+.header .scrolled {
+  width: 100%;
+}
 /*  */
+@media (max-width: 1400px) {
+}
 @media (max-width: 1056px) {
   .nav-bar {
     display: none;
   }
   .header-container {
+    /* width: auto;,s*/
     width: 100%;
   }
   .brand-details {
@@ -231,6 +234,10 @@ h1 {
   }
   .header {
     position: fixed;
+    /* width: auto; */
+  }
+  .scrolled {
+    /* width: 100%; */
   }
   .header-end {
     display: flex;
@@ -268,7 +275,6 @@ h1 {
   right: 0;
   width: 100%;
   background-color: rgba(0, 0, 128, 0.557);
-  /* box-shadow: 0px 1px 5px rgb(163, 158, 158); */
   z-index: 10;
   display: none;
   animation: grow 0.5s ease-in-out;
