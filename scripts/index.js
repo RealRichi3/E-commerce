@@ -218,36 +218,66 @@ prevButtonShop.addEventListener("click", function () {
 });
 
 // VERBOSE PREVIEW PANE
-// Verbose preview pane close button action
-function updateVerbosePreview() {}
+
 let vCloseButton = document.getElementsByClassName("close-verbose-pane")[0],
+  vOpenButtons = Array.from(document.getElementsByClassName("preview-button")),
   vPreviewPane = document.getElementsByClassName("verbose-pane")[0],
-  vProductName = document.getElementsByClassName(
-    "verbose-pane product-name"
-  )[0],
-  vProductDescription = document.getElementsByClassName(
-    "verbose-pane product-description"
-  )[0],
-  vProductPrice = document.getElementsByClassName(
-    "verbose-pane product-price"
-  )[0],
-  vProductQuantity = document.getElementsByClassName(
-    "verbose-pane item-stock"
-  )[0],
-  vProductImage = document.getElementsByClassName(
-    "verbose-pane v-product-image"
-  )[0],
+  vProductName = document.querySelector(".verbose-pane .product-name"),
+  vProductPrice = document.querySelector(".verbose-pane .product-price"),
+  vProductDescription = document.querySelector(
+    ".verbose-pane .product-description"
+  ),
+  vProductImage = document.querySelector(".verbose-pane .product-image"),
+  vProductQuantity = document.querySelector(".verbose-pane .product-stock"),
   addToCartButtons = Array.from(document.getElementsByClassName("add-to-cart"));
-  
-vCloseButton.addEventListener("click", () => {
-  vPreviewPane.style.display = "none";
-});
-addToCartButtons.forEach((addToCartbutton) => {
-  addToCartbutton.addEventListener("click", () => {
+
+// Update Verbose preview pane with product details
+function updateVerbosePreview(previewButton) {
+  console.log(vProductImage);
+  console.log(vProductName);
+  console.log(vProductDescription);
+  console.log(vProductPrice);
+  console.log(vProductQuantity);
+
+  let product = previewButton.parentNode.parentNode.parentNode;
+  console.log(previewButton.parentNode.parentNode.parentNode);
+  vProductName.innerHTML =
+    product.getElementsByClassName("product-name")[0].innerHTML;
+  vProductDescription.innerHTML = product.getElementsByClassName(
+    "product-description"
+  )[0].innerHTML;
+  vProductPrice.innerHTML =
+    product.getElementsByClassName("product-price")[0].innerHTML;
+  vProductQuantity.innerHTML = product
+    .getElementsByClassName("item-stock")[0]
+    .innerHTML.split("/")[0];
+  vProductImage.src = product.getElementsByClassName("product-img")[0].src;
+  console.log(vProductName.innerHTML);
+  console.log(vProductDescription.innerHTML);
+  console.log(vProductPrice.innerHTML);
+  console.log(vProductQuantity.innerHTML);
+  console.log(vProductImage.src);
+}
+
+// Verbose preview pane close button action
+vOpenButtons.forEach((previewButton) => {
+  previewButton.addEventListener("click", () => {
+    updateVerbosePreview(previewButton);
+
+    // let product = previewButton.parentNode.parentNode.parentNode;
+    // console.log(product);
+    // console.log(product.getElementsByClassName("product-name")[0].innerHTML);
     vPreviewPane.style.display = "flex";
   });
 });
-// Open verbose preview on add-to-cart button click
+vCloseButton.addEventListener("click", () => {
+  vPreviewPane.style.display = "none";
+});
+// addToCartButtons.forEach((addToCartbutton) => {
+//   addToCartbutton.addEventListener("click", () => {
+//     vPreviewPane.style.display = "flex";
+//   });
+// });
 
 // Slide show fix
 // Fix all slides displaying on window load

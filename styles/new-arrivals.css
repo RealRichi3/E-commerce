@@ -59,6 +59,10 @@
 .new-arrivals .product-name {
   font-size: 18px;
   margin: 10px;
+  margin-top: 0px;
+}
+.new-arrivals .available-stock {
+  font-size: smaller;
 }
 .new-arrivals-item-info .product-description {
   display: none;
@@ -68,6 +72,10 @@
   font-style: bold;
   font-weight: 900;
   color: #e4492e;
+}
+.new-arrivals .add-to-cart {
+  margin-top: 10px;
+  width: 150px;
 }
 .new-arrivals p {
   margin: 0;
@@ -105,7 +113,10 @@
   text-align: center;
   visibility: hidden;
 }
-.new-arrivals-img-hover > p {
+.new-arrivals-img-hover .product-description {
+  text-align: left;
+  font-size: 12px;
+  width: 100%;
   height: 160px;
   overflow: hidden;
 }
