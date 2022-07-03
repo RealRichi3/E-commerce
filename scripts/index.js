@@ -218,7 +218,6 @@ prevButtonShop.addEventListener("click", function () {
 });
 
 // VERBOSE PREVIEW PANE
-
 let vCloseButton = document.getElementsByClassName("close-verbose-pane")[0],
   vOpenButtons = Array.from(document.getElementsByClassName("preview-button")),
   vPreviewPane = document.getElementsByClassName("verbose-pane")[0],
@@ -251,10 +250,6 @@ function updateVerbosePreview(previewButton) {
 vOpenButtons.forEach((previewButton) => {
   previewButton.addEventListener("click", () => {
     updateVerbosePreview(previewButton);
-
-    // let product = previewButton.parentNode.parentNode.parentNode;
-    // console.log(product);
-    // console.log(product.getElementsByClassName("product-name")[0].innerHTML);
     vPreviewPane.style.display = "flex";
   });
 });
