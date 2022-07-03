@@ -96,10 +96,10 @@ let currentSlide = -1,
 // Slide show on click
 function slideShow(current) {
   slides.forEach((slide) => {
-    slide.style.visibility = "hidden";
+    slide.style.display = "none";
   });
   // slides[currentSlide].style.visibility = "hidden";
-  slides[current].style.visibility = "visible";
+  slides[current].style.display = "flex";
 }
 
 // Auto slide show
@@ -126,15 +126,6 @@ prevButton.addEventListener("click", function () {
   }
   slideShow(currentSlide);
 });
-// Slide show fix
-// Fix first background image not showing on load
-function windowLoad() {
-  slides.forEach((slide) => {
-    slide.style.visibility = "hidden";
-  });
-  slides[0].style.visibility = "visible";
-}
-windowLoad();
 
 // NEW ARRIVALS
 // Product Image Hover Effect
@@ -183,26 +174,34 @@ stockBar.forEach((bar) => {
 
 // Shop slide show
 let shopProducts = Array.from(document.getElementsByClassName("shop-item")),
-  nextButtonShop = document.getElementsByClassName("shop-prev-button")[0],
-  prevButtonShop = document.getElementsByClassName("shop-next-button")[0],
+  nextButtonShop = document.getElementsByClassName("shop-next-button")[0],
+  prevButtonShop = document.getElementsByClassName("shop-prev-button")[0],
   groupedShopProducts = [],
-  shopCurrentSlide = -1;
+  shopCurrentSlide = -1,
+  currentPaneNumber = document.getElementById("current-pane-number"),
+  totalPaneNumber = document.getElementById("total-pane-number");
 
+console.log(currentPaneNumber);
+console.log(totalPaneNumber);
 function shopSlideShow(currentShopSlide) {
   groupedShopProducts.forEach((group) => {
     group.forEach((product) => {
       product.style.display = "none";
     });
   });
-  // groupedShopProducts[shopCurrentSlide].style.visibility = "hidden";
   groupedShopProducts[currentShopSlide].forEach((item) => {
-    item.style.display = "block";
+    item.style.display = "flex";
   });
+  currentPaneNumber.innerHTML = currentShopSlide + 1;
 }
+
 // Group shop products in twos
-for (let i = 0; i < shopProducts.length; i += 2) {
-  groupedShopProducts.push(shopProducts.slice(i, i + 2));
+for (let i = 0; i < shopProducts.length; i += 4) {
+  groupedShopProducts.push(shopProducts.slice(i, i + 4));
 }
+totalPaneNumber.innerHTML = groupedShopProducts.length;
+
+// Next button action
 nextButtonShop.addEventListener("click", function () {
   if (shopCurrentSlide < groupedShopProducts.length - 1) {
     shopCurrentSlide++;
@@ -211,6 +210,7 @@ nextButtonShop.addEventListener("click", function () {
   }
   shopSlideShow(shopCurrentSlide);
 });
+// Prev button action
 prevButtonShop.addEventListener("click", function () {
   shopCurrentSlide--;
   if (shopCurrentSlide <= -1) {
@@ -218,3 +218,22 @@ prevButtonShop.addEventListener("click", function () {
   }
   shopSlideShow(shopCurrentSlide);
 });
+
+// Slide show fix
+// Fix all slides displaying on window load
+function windowLoad() {
+  // for Welcome Pane
+  slides.forEach((slide) => {
+    slide.style.display = "none";
+  });
+  slideShow(0);
+
+  // for Shop
+  groupedShopProducts.forEach((group) => {
+    group.forEach((product) => {
+      product.style.display = "none";
+    });
+  });
+  shopSlideShow(0);
+}
+windowLoad();
