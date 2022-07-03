@@ -180,9 +180,7 @@ let shopProducts = Array.from(document.getElementsByClassName("shop-item")),
   shopCurrentSlide = -1,
   currentPaneNumber = document.getElementById("current-pane-number"),
   totalPaneNumber = document.getElementById("total-pane-number");
-
-console.log(currentPaneNumber);
-console.log(totalPaneNumber);
+// Slide show effect for main shop
 function shopSlideShow(currentShopSlide) {
   groupedShopProducts.forEach((group) => {
     group.forEach((product) => {
@@ -218,6 +216,38 @@ prevButtonShop.addEventListener("click", function () {
   }
   shopSlideShow(shopCurrentSlide);
 });
+
+// VERBOSE PREVIEW PANE
+// Verbose preview pane close button action
+function updateVerbosePreview() {}
+let vCloseButton = document.getElementsByClassName("close-verbose-pane")[0],
+  vPreviewPane = document.getElementsByClassName("verbose-pane")[0],
+  vProductName = document.getElementsByClassName(
+    "verbose-pane product-name"
+  )[0],
+  vProductDescription = document.getElementsByClassName(
+    "verbose-pane product-description"
+  )[0],
+  vProductPrice = document.getElementsByClassName(
+    "verbose-pane product-price"
+  )[0],
+  vProductQuantity = document.getElementsByClassName(
+    "verbose-pane item-stock"
+  )[0],
+  vProductImage = document.getElementsByClassName(
+    "verbose-pane v-product-image"
+  )[0],
+  addToCartButtons = Array.from(document.getElementsByClassName("add-to-cart"));
+  
+vCloseButton.addEventListener("click", () => {
+  vPreviewPane.style.display = "none";
+});
+addToCartButtons.forEach((addToCartbutton) => {
+  addToCartbutton.addEventListener("click", () => {
+    vPreviewPane.style.display = "flex";
+  });
+});
+// Open verbose preview on add-to-cart button click
 
 // Slide show fix
 // Fix all slides displaying on window load

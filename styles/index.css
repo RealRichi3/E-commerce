@@ -58,10 +58,10 @@ body {
   padding: 20px;
   position: fixed;
   background-color: #333333c9;
-  display: flex;
   align-items: center;
   justify-content: center;
   z-index: 11;
+  display: none;
 }
 .verbose-pane-container {
   width: 70%;
@@ -131,7 +131,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100%;
-  width: 100%;  
+  width: 100%;
 }
 .verbose-pane-container .product-img > img {
   width: 100%;
