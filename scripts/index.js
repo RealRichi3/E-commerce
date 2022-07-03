@@ -98,7 +98,6 @@ function slideShow(current) {
   slides.forEach((slide) => {
     slide.style.display = "none";
   });
-  // slides[currentSlide].style.visibility = "hidden";
   slides[current].style.display = "flex";
 }
 
@@ -268,12 +267,6 @@ cartOpenButton.addEventListener("click", () => {
 cartCloseButton.addEventListener("click", () => {
   cartPanel.style.display = "none";
 });
-
-// addToCartButtons.forEach((addToCartbutton) => {
-//   addToCartbutton.addEventListener("click", () => {
-//     vPreviewPane.style.display = "flex";
-//   });
-// });
 
 // Slide show fix
 // Fix all slides displaying on window load

@@ -1,10 +1,9 @@
 .main-shop {
   margin: 0 auto;
   margin-top: 150px;
-  margin-bottom: 100px;
+  margin-bottom: 400px;
   width: 100%;
   max-width: 1400px;
-  /* max-width: 100%; */
   height: auto;
   display: flex;
   flex-direction: column;
@@ -263,6 +262,25 @@
   color: #ffffff;
 }
 
+@media (max-width: 550px) {
+  .shop-item .product-price {
+    font-size: 15px;
+    font-weight: 600;
+    height: 60px;
+    margin: 0;
+    margin-bottom: 5px;
+    color: #e4492ed3;
+  }
+  .shop-item .add-to-cart {
+    width: 80px;
+    height: 20px;
+    position: relative;
+
+    border-radius: 20px;
+    margin: 0;
+    font-size: xx-small;
+  }
+}
 @media (max-width: 780px) {
   .main-shop {
     width: 100%;

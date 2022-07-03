@@ -140,7 +140,6 @@ body {
 }
 .verbose-pane-container .product-info > * {
   width: 100%;
-  /* height: auto;  */
   display: flex;
   flex-direction: column;
   align-items: left;
@@ -231,6 +230,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 20px;
   color: rgba(255, 255, 255, 0.617);
 }
 .page-description {
@@ -325,15 +325,7 @@ body {
   .footer > * {
     width: 100%;
   }
-}
-/* @media (max-width: 1200px) {
-  .container {
-    width: 1200px;
+  .footer-copyright {
+    text-align: center;
   }
 }
-
-@media (max-width: 780px) {
-  .container {
-    width: 780px;
-  }
-} */

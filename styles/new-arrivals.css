@@ -155,7 +155,6 @@
 @media (max-width: 1056px) {
   .new-arrivals-container {
     grid-template-columns: auto auto auto;
-    /* width: 100%; */
   }
 }
 
