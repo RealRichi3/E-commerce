@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: center;
   z-index: 11;
-  display: flex;
+  display: none;
 }
 .final-cart-container {
   width: 70%;
