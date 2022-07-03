@@ -282,6 +282,18 @@
     margin: 0;
     font-size: xx-small;
   }
+  /* .shopNextPrevButtons{
+    height: 50px;
+    width: 50px;
+  } */
+  .shopNextPrevButtons {
+    height: 70%;
+    width: 100px;
+  }
+  .shopNextPrevButtons > button {
+    height: 40px;
+    width: 40px;
+  }
 }
 @media (max-width: 780px) {
   .main-shop {

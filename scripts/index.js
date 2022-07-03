@@ -68,16 +68,6 @@ welcomePaneContainer.addEventListener("mouseover", function () {
   });
 });
 
-// Hover Effect for cart button
-let cartButton = document.getElementsByClassName("cartBtn")[0],
-  cartImg = document.getElementsByClassName("cartImg")[0];
-cartButton.addEventListener("mouseover", function () {
-  cartImg.setAttribute("src", "./img/icons/shopping-cart-hover.png");
-});
-cartButton.addEventListener("mouseout", function () {
-  cartImg.setAttribute("src", "./img/icons/shopping-cart (3).png");
-});
-
 // Add items from shop to welcome pane
 function addToWelcomePane(product) {
   welcomePaneContainer.appendChild(product);
@@ -289,42 +279,6 @@ vCloseButton.addEventListener("click", () => {
   vPreviewPane.style.display = "none";
 });
 
-// CART
-// Show on button click
-let cartOpenButton = document.getElementsByClassName("cartBtn")[0],
-  cartCloseButton = document.getElementsByClassName("close-cart")[0],
-  cartPanel = document.getElementsByClassName("final-cart")[0];
-cartOpenButton.addEventListener("click", () => {
-  cartPanel.style.display = "flex";
-});
-cartCloseButton.addEventListener("click", () => {
-  cartPanel.style.display = "none";
-});
-
-// Increase Cart item number on click(add-to-cart)
-let addToCartButtons = Array.from(
-    document.getElementsByClassName("add-to-cart")
-  ),
-  cartItemNumber = document.getElementById("cart-items-number");
-addToCartButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    cartItemNumber.innerHTML = Number(cartItemNumber.innerHTML) + 1;
-  });
-});
-
-// Remove item from cart on button click (remove-item button)
-let removeItemButtons = Array.from(
-  document.getElementsByClassName("remove-item")
-);
-removeItemButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    button.parentNode.parentNode.remove();
-    cartItemNumber.innerHTML = Number(cartItemNumber.innerHTML) - 1;
-    if (cartItemNumber.innerHTML < 0) {
-      cartItemNumber.innerHTML = 0;
-    }
-  });
-});
 
 // Slide show fix
 // Fix all slides displaying on window load
