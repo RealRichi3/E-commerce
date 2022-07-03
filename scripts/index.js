@@ -226,8 +226,7 @@ let vCloseButton = document.getElementsByClassName("close-verbose-pane")[0],
     ".verbose-pane .product-description"
   ),
   vProductImage = document.querySelector(".verbose-pane .product-image"),
-  vProductQuantity = document.querySelector(".verbose-pane .item-stock"),
-  addToCartButtons = Array.from(document.getElementsByClassName("add-to-cart"));
+  vProductQuantity = document.querySelector(".verbose-pane .item-stock");
 
 // Update Verbose preview pane with product details
 function updateVerbosePreview(previewButton) {
@@ -268,6 +267,27 @@ cartCloseButton.addEventListener("click", () => {
   cartPanel.style.display = "none";
 });
 
+// Increase Cart item number on click(add-to-cart)
+let addToCartButtons = Array.from(
+    document.getElementsByClassName("add-to-cart")
+  ),
+  cartItemNumber = document.getElementById("cart-items-number");
+addToCartButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    cartItemNumber.innerHTML = Number(cartItemNumber.innerHTML) + 1;
+  });
+});
+
+// Remove item from cart on button click (remove-item button)
+let removeItemButtons = Array.from(document.getElementsByClassName("remove-item"));
+removeItemButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    button.parentNode.parentNode.remove();
+    cartItemNumber.innerHTML = Number(cartItemNumber.innerHTML) - 1;
+  });
+}
+);
+
 // Slide show fix
 // Fix all slides displaying on window load
 function windowLoad() {
@@ -276,7 +296,6 @@ function windowLoad() {
     slide.style.display = "none";
   });
   slideShow(0);
-
   // for Shop
   groupedShopProducts.forEach((group) => {
     group.forEach((product) => {

@@ -21,9 +21,11 @@
 }
 .shop-header h1 {
   color: black;
+  width: 150px;
   font-size: 40px;
   font-weight: bold;
-  text-align: left;
+  text-align: center;
+  margin: auto auto;
 }
 .shopNextPrevButtons {
   position: absolute;
