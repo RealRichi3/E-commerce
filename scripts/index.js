@@ -82,10 +82,12 @@ cartButton.addEventListener("mouseout", function () {
 function addToWelcomePane(product) {
   welcomePaneContainer.appendChild(product);
 }
-let productsToShow = Array.from(
-  document.getElementsByClassName("shop-item")
-).slice(0, 5);
-productsToShow.forEach((product) => {
+let numberOfProductsToShow = 4;
+let productsToShow = Array.from(document.getElementsByClassName("shop-item"));
+if (productsToShow.length < numberOfProductsToShow) {
+  numberOfProductsToShow = productsToShow.length;
+}
+productsToShow.slice(0, numberOfProductsToShow).forEach((product) => {
   let itemName = product.getElementsByClassName("product-name")[0].innerHTML,
     itemDescription = product.getElementsByClassName("product-description")[0]
       .innerHTML,
@@ -100,7 +102,8 @@ productsToShow.forEach((product) => {
               <button class="shop-now">SHOP NOW</button>
           </div>
       </div>
-`,});
+`,
+    });
 
   newHTMLObject.getElementsByClassName("product-name")[0].innerHTML = itemName;
   newHTMLObject.getElementsByClassName("product-description")[0].innerHTML =
@@ -317,6 +320,9 @@ removeItemButtons.forEach((button) => {
   button.addEventListener("click", () => {
     button.parentNode.parentNode.remove();
     cartItemNumber.innerHTML = Number(cartItemNumber.innerHTML) - 1;
+    if (cartItemNumber.innerHTML < 0) {
+      cartItemNumber.innerHTML = 0;
+    }
   });
 });
 
