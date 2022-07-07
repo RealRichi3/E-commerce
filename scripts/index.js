@@ -280,6 +280,18 @@ vCloseButton.addEventListener("click", () => {
 });
 
 
+// CART
+// Show on button click
+let cartOpenButton = document.getElementsByClassName("cartBtn")[0],
+  cartCloseButton = document.getElementsByClassName("close-cart")[0],
+  cartPanel = document.getElementsByClassName("final-cart")[0];
+cartOpenButton.addEventListener("click", () => {
+  cartPanel.style.display = "flex";
+});
+cartCloseButton.addEventListener("click", () => {
+  cartPanel.style.display = "none";
+});
+
 // Slide show fix
 // Fix all slides displaying on window load
 function windowLoad() {
